@@ -7,10 +7,13 @@ public class RectangleInfo {
         double height;
 
         do {
-            System.out.println("Enter the width of the rectangle(must be positive): ");
+            System.out.println("Enter the width of the rectangle: ");
             if(in.hasNextDouble())
             {
                 width = in.nextDouble();
+                if(width <= 0) {
+                    System.out.println("You did not enter a positive number!");
+                }
             }
             else {
                 System.out.println("You did not enter a double!");
@@ -20,10 +23,13 @@ public class RectangleInfo {
         } while (width <= 0);
 
         do {
-            System.out.println("Enter the height of the rectangle(must be positive): ");
+            System.out.println("Enter the height of the rectangle: ");
             if(in.hasNextDouble())
             {
                 height = in.nextDouble();
+                if(height <= 0) {
+                    System.out.println("You did not enter a positive number!");
+                }
             }
             else {
                 System.out.println("You did not enter a double!");

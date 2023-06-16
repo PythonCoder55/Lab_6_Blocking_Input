@@ -7,10 +7,13 @@ public class FuelCosts {
         double pricePerGallon;
 
         do {
-            System.out.println("Enter the number of gallons of gas in the tank(must be positive): ");
+            System.out.println("Enter the number of gallons of gas in the tank: ");
             if(in.hasNextDouble())
             {
                 gallonsInTank = in.nextDouble();
+                if(gallonsInTank <= 0) {
+                    System.out.println("You did not enter a positive number!");
+                }
             }
             else {
                 System.out.println("You did not enter a double!");
@@ -20,9 +23,12 @@ public class FuelCosts {
         } while (gallonsInTank <= 0);
 
         do {
-            System.out.println("Enter the fuel efficiency in miles per gallon(must be positive): ");
+            System.out.println("Enter the fuel efficiency in miles per gallon: ");
             if(in.hasNextDouble()) {
                 fuelEfficiency = in.nextDouble();
+                if(fuelEfficiency <= 0) {
+                    System.out.println("You did not enter a positive number!");
+                }
             }
             else {
                 System.out.println("You did not enter a double!");
@@ -32,9 +38,12 @@ public class FuelCosts {
         } while (fuelEfficiency <= 0);
 
         do {
-            System.out.println("Enter the price of gas per gallon(must be positive): ");
+            System.out.println("Enter the price of gas per gallon: ");
             if(in.hasNextDouble()) {
                 pricePerGallon = in.nextDouble();
+                if(pricePerGallon <= 0) {
+                    System.out.println("You did not enter a positive number!");
+                }
             }
             else {
                 System.out.println("You did not enter a double!");
